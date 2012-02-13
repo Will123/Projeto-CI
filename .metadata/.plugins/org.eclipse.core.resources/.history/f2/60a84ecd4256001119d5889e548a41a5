@@ -1,0 +1,102 @@
+package br.com.cisistemas;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.GradientDrawable.Orientation;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+public class PesquisaClientes extends Activity implements OnItemClickListener {
+	
+	private ListView listView;
+    private AdapterListView adapterListView;
+    private ArrayList<ItemListView> itens;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.pesquisacliente);
+		
+        //Pega a referencia do ListView
+        listView = (ListView) findViewById(R.id.lstSocios);
+
+        //Define o Listener quando alguem clicar no item.
+        listView.setOnItemClickListener(PesquisaClientes.this);
+        //listView.setOnItemClickListener(this) ;
+
+        createListView();
+        
+        GradientDrawable grad = new GradientDrawable(Orientation.TOP_BOTTOM,new int[] {Color.rgb(187,215,203), Color.rgb(75, 126, 105)});
+        // seta o degradê criado para o layout atual
+        this.getWindow().setBackgroundDrawable(grad);
+		
+				
+	}
+	
+	 private void createListView() {
+
+	        //Criamos nossa lista que preenchera o ListView
+
+	        itens = new ArrayList<ItemListView>();
+	        ItemListView item1 = new ItemListView("Claudia Roberta", R.drawable.usericon);
+	        ItemListView item2 = new ItemListView("Clarice Lispector", R.drawable.usericon);        
+	        ItemListView item3 = new ItemListView("Cecília Araujo", R.drawable.usericon);
+	        ItemListView item4 = new ItemListView("Carlos Andrade", R.drawable.usericon);
+	        ItemListView item5 = new ItemListView("Claudia Roberta", R.drawable.usericon);
+	        ItemListView item6 = new ItemListView("Clarice Lispector", R.drawable.usericon);        
+	        ItemListView item7 = new ItemListView("Cecília Araujo", R.drawable.usericon);
+	        ItemListView item8 = new ItemListView("Carlos Andrade", R.drawable.usericon);
+	        ItemListView item9 = new ItemListView("Claudia Roberta", R.drawable.usericon);
+	        ItemListView item10 = new ItemListView("Clarice Lispector", R.drawable.usericon);        
+	        ItemListView item11 = new ItemListView("Cecília Araujo", R.drawable.usericon);
+	        ItemListView item12 = new ItemListView("Carlos Andrade", R.drawable.usericon);
+	        
+	        itens.add(item1);
+	        itens.add(item2);
+	        itens.add(item3);
+	        itens.add(item4);
+	        itens.add(item5);
+	        itens.add(item6);
+	        itens.add(item7);
+	        itens.add(item8);
+	        itens.add(item9);
+	        itens.add(item10);
+	        itens.add(item11);
+	        itens.add(item12);
+	        
+	 
+	        //Cria o adapter
+	        adapterListView = new AdapterListView(this, itens);
+
+	        //Define o Adapter
+	        listView.setAdapter(adapterListView);
+
+	        //Cor quando a lista é selecionada para ralagem.
+	        listView.setCacheColorHint(Color.TRANSPARENT);
+
+	    }
+	 
+	 
+	 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+	    	
+	        //Pega o item que foi selecionado.
+	        //ItemListView item = adapterListView.getItem(arg2);
+	        
+	      //Demostração
+	      //Toast.makeText(this, "Você Clicou em: " + item.getTexto(), Toast.LENGTH_LONG).show();
+	        
+	        startActivity(new Intent(this,Fichas.class));
+	         
+	    }
+	
+    
+}

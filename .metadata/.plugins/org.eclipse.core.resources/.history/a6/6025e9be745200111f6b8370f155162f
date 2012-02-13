@@ -1,0 +1,22 @@
+package br.com.caelum.cadastro;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.webkit.WebView;
+
+public class VerSite extends Activity {
+	//Aluno aluno= new Aluno();
+	private Aluno alunoSelecionado;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.site);
+		WebView view =(WebView) findViewById(R.id.vwweb);
+		ListaAlunos lista= new ListaAlunos();
+		
+		String site= alunoSelecionado.getSite();
+		view.loadUrl(site);
+	}
+
+	
+}

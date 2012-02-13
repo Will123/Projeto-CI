@@ -1,0 +1,20 @@
+package br.com.ci;
+
+import android.app.Activity;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.widget.CalendarView;
+
+public class TelaActivity extends Fragment  {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        CalendarView  calendarView =(CalendarView )findViewById( R.id.calendarView1);
+           calendarView.callOnClick();
+
+
+    }
+}

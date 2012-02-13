@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:textSize="50px" >
+
+    <TableRow
+        android:layout_marginLeft="150px"
+        android:layout_marginRight="150px"
+        android:background="#003499"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="50px" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginLeft="150px"
+        android:layout_marginRight="150px"
+        android:background="#003499"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="50px" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginLeft="150px"
+        android:layout_marginRight="150px"
+        android:background="#003499"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Usuário: "
+            android:textSize="50px" />
+
+        <EditText
+            android:id="@+id/editusuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o Usuário"
+            android:textSize="50px" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginLeft="150px"
+        android:layout_marginRight="150px"
+        android:background="#003499"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Senha: "
+            android:textSize="50px" />
+
+        <EditText
+            android:id="@+id/editusuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:password="true"
+            android:textSize="50px" />
+    </TableRow>
+
+    <TableRow
+        android:baselineAligned="true"
+        android:clickable="true"
+        android:drawingCacheQuality="auto"
+        android:fadeScrollbars="false"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="20px"
+        android:filterTouchesWhenObscured="true"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="10px"
+            android:layout_height="wrap_content"
+            android:keepScreenOn="true"
+            android:text="Login"
+            android:textSize="50px" />
+    </TableRow>
+
+</TableLayout>
